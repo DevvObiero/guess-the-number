@@ -1,97 +1,79 @@
-// 'use strict';
-// // console.log(document.querySelector('.message').textContent);
-
-// // document.querySelector('.message').textContent = "Correct Number!😎"
-// // document.querySelector('.number').textContent =13;
-// // document.querySelector('.score').textContent =10;
-// // document.querySelector('.guess').value =29;
-
-// const secretnumber=Math.trunc(Math.random()*20)+1;
-
-// let score=20
-
-// document.querySelector('.number').textContent = secretnumber;
-
-// document.querySelector('.check').addEventListener
-// ('click',function() {
-// const guess =Number (document.querySelector('.guess').value);
-// console.log(typeof guess,guess)
-
-// if(!guess){
-//     document.querySelector('.message').textContent = "No Number!⛔" 
-// }else if(guess===secretnumber){
-//     document.querySelector('.message').textContent = "Correct Number!😎" 
-// }else if(guess>secretnumber){
-//     if(score>0){
-//     document.querySelector('.message').textContent = "Too High!📈";
-// score--;
-// document.querySelector('.score').textContent =score;
-// }else{document.querySelector('.message').textContent = " game over😂";}
-// }else if(guess<secretnumber){
-//     if(score>0){
-//     document.querySelector('.message').textContent = "Too Low!📉";
-//     score--;
-//     document.querySelector('.score').textContent =score;
-// }else{
-//     document.querySelector('.message').textContent = "you lose😂";
-// }}
-
-// });
 
 
 
 'use strict';
 
-// This is a number guessing game script
-
+// Log the current message in the '.message' element in the console
 // console.log(document.querySelector('.message').textContent);
 
+// Display a message when the user correctly guesses the number
 // document.querySelector('.message').textContent = "Correct Number!😎"
-// document.querySelector('.number').textContent =13;
-// document.querySelector('.score').textContent =10;
-// document.querySelector('.guess').value =29;
-
-// Generate a secret number between 1 and 20
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
-
-let score = 20; // Initialize the score to 20
 
 // Display the secret number on the webpage
-document.querySelector('.number').textContent = secretNumber;
+// document.querySelector('.number').textContent =13;
 
-document.querySelector('.check').addEventListener('click', function () {
-  // Retrieve the user's guess from the input field
-  const guess = Number(document.querySelector('.guess').value);
-  console.log(typeof guess, guess);
+// Display the initial score on the webpage
+// document.querySelector('.score').textContent =10;
 
-  // Check if the user has entered a guess
-  if (!guess) {
-    document.querySelector('.message').textContent = 'No Number!⛔';
-    // If the user has not entered a guess, do not change the score
-    // and do not check if the guess is correct
-  } else if (guess === secretNumber) {
-    document.querySelector('body').style.backgroundColor = 'rgba(255, 255, 255,
-    document.querySelector('.message').textContent = 'Correct Number!😎';
-    // If the user's guess is correct, do not change the score
-  } else if (guess > secretNumber) {
-    // Check if the user still has a score remaining
-    if (score > 0) {
-      document.querySelector('.message').textContent = 'Too High!📈';
-      score--; // Decrease the score by 1
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'Game Over!😂';
+// Set an initial guess value for the user
+// document.querySelector('.guess').value =29;
+
+// Generate a secret number that the user has to guess
+const secretnumber = Math.trunc(Math.random() * 20) + 1;
+
+// Initialize the score to 20
+let score = 20;
+
+// Display the secret number on the webpage
+document.querySelector('.number').textContent = secretnumber;
+
+document.querySelector('.check').addEventListener
+('click', function () {
+    // Get the user's guessed number as a number
+    const guess = Number(document.querySelector('.guess').value);
+    console.log(typeof guess, guess);
+
+    // Check if the user hasn't entered a number and display the correct message
+    if (!guess) {
+        document.querySelector('.message').textContent = "No Number!⛔";
     }
-  } else if (guess < secretNumber) {
-    // Check if the user still has a score remaining
-    if (score > 0) {
-      document.querySelector('.message').textContent = 'Too Low!📉';
-      score--; // Decrease the score by 1
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'Game Over!😂';
+
+    // Check if the user has guessed the secret number correctly
+    else if (guess === secretnumber) {
+        document.querySelector('.message').textContent = "Correct Number!😎";
     }
-  }
+
+    // Check if the user's guess is higher than the secret number
+    else if (guess > secretnumber) {
+        if (score > 0) {
+            // Update the message to indicate that the user's guess is too high
+            document.querySelector('.message').textContent = "Too High!📈";
+
+            // Decrement the score
+            score--;
+
+            // Update the score displayed on the webpage
+            document.querySelector('.score').textContent = score;
+        } else {
+            // Inform the user that the game is over because they ran out of attempts
+            document.querySelector('.message').textContent = "game over😂";
+        }
+    }
+
+    // Check if the user's guess is lower than the secret number
+    else if (guess < secretnumber) {
+        if (score > 0) {
+            // Update the message to indicate that the user's guess is too low
+            document.querySelector('.message').textContent = "Too Low!📉";
+
+            // Decrement the score
+            score--;
+
+            // Update the score displayed on the webpage
+            document.querySelector('.score').textContent = score;
+        } else {
+            // Inform the user that they lost the game because they ran out of attempts
+            document.querySelector('.message').textContent = "you lose😂";
+        }
+    }
 });
-
-// The rest of the code is for styling the game and handling edge cases
