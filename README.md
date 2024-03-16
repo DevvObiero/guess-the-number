@@ -1,4 +1,4 @@
-# guess-the-number
+# guess-the-number(https://guessmasterrr.netlify.app)
 Guess the Number Game
 Welcome to the GitHub repository for the Guess the Number Game, an interactive, terminal-based game designed to provide endless fun with numbers. Developed using Python, this game challenges players to guess a secret number within a limited number of attempts. It's a test of logic, intuition, and a sprinkle of luck.
 
