@@ -3,7 +3,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding:0;
   box-sizing: inherit;
 }
 
@@ -24,6 +24,8 @@ header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
+  width: 100%; /* Ensure the header spans the full width of its container */
+  box-sizing: border-box;
 }
 
 main {
@@ -42,13 +44,13 @@ main {
 }
 
 .right {
-  width: 52rem;
+  width: 50rem;
   font-size: 2rem;
 }
 
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 30px;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -62,7 +64,7 @@ h1 {
   color: #333;
   font-size: 6rem;
   width: 15rem;
-  padding: 3rem 0rem;
+  padding: 3rem 1rem;
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -71,16 +73,22 @@ h1 {
 }
 
 .between {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   position: absolute;
   top: 2rem;
   right: 2rem;
 }
 
-.again {
+.reset{
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  padding: 10px 20px;
+  min-width: 50px;
+}
+
+@media (max-width: 390px) {
+  button {
+    padding: 8px 16px; /* Slightly smaller padding on smaller screens */
+  }
 }
 
 .guess {
@@ -104,6 +112,8 @@ h1 {
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
+  min-width: 50px;
+
 }
 
 .btn:hover {

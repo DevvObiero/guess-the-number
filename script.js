@@ -19,13 +19,13 @@
 // document.querySelector('.guess').value =29;
 
 // Generate a secret number that the user has to guess
-const secretnumber = Math.trunc(Math.random() * 20) + 1;
+let secretnumber = Math.trunc(Math.random() * 20) + 1;
 
-// Initialize the score to 20
-let score = 20;
-
+// Initialize the score to 10
+let score = 10;
+let highscore = 0;
 // Display the secret number on the webpage
-document.querySelector('.number').textContent = secretnumber;
+
 
 document.querySelector('.check').addEventListener
 ('click', function () {
@@ -40,7 +40,16 @@ document.querySelector('.check').addEventListener
 
     // Check if the user has guessed the secret number correctly
     else if (guess === secretnumber) {
+        if(score > highscore) {
+            highscore = score;
+            document.querySelector('.highscore').
+            textContent = highscore;
+        }
         document.querySelector('.message').textContent = "Correct Number!😎";
+        document.querySelector('body').style.backgroundColor ='#60b347';
+        document.querySelector('.number').textContent = secretnumber;
+        document.querySelector('number').style.width ='30rem';
+       
     }
 
     // Check if the user's guess is higher than the secret number
@@ -51,12 +60,14 @@ document.querySelector('.check').addEventListener
 
             // Decrement the score
             score--;
-
+            document.querySelector('body').style.backgroundColor ='#800000';
             // Update the score displayed on the webpage
             document.querySelector('.score').textContent = score;
         } else {
+            document.querySelector('.number').textContent = secretnumber;
             // Inform the user that the game is over because they ran out of attempts
             document.querySelector('.message').textContent = "game over😂";
+            document.querySelector('body').style.backgroundColor ='red';  
         }
     }
 
@@ -68,12 +79,27 @@ document.querySelector('.check').addEventListener
 
             // Decrement the score
             score--;
-
+            document.querySelector('body').style.backgroundColor ='#800000';
             // Update the score displayed on the webpage
             document.querySelector('.score').textContent = score;
         } else {
+            document.querySelector('.number').textContent = secretnumber;
+            document.querySelector('body').style.backgroundColor ='red';
             // Inform the user that they lost the game because they ran out of attempts
             document.querySelector('.message').textContent = "you lose😂";
         }
     }
 });
+
+
+document.querySelector('.btn.reset').addEventListener
+('click', function() {
+    document.querySelector('body').style.backgroundColor ='#222';
+    score=10;
+    secretnumber = Math.trunc(Math.random() * 20) + 1;
+    document.querySelector('.message').textContent = "start Guessing...";
+    document.querySelector('.score').textContent = score;
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('.guess').textContentvalue ='';
+    document.querySelector('number').style.width ='30rem';
+})
