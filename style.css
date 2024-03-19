@@ -16,15 +16,14 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
+  
 }
 
-/* LAYOUT */
 header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
-  width: 100%; /* Ensure the header spans the full width of its container */
+  width: 100%; 
   box-sizing: border-box;
 }
 
@@ -48,7 +47,7 @@ main {
   font-size: 2rem;
 }
 
-/* ELEMENTS STYLE */
+
 h1 {
   font-size: 30px;
   text-align: center;
@@ -87,7 +86,7 @@ h1 {
 
 @media (max-width: 390px) {
   button {
-    padding: 8px 16px; /* Slightly smaller padding on smaller screens */
+    padding: 8px 16px; 
   }
 }
 
