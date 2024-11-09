@@ -30,7 +30,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 🙏 Acknowledgements
 A huge thank you to everyone who has played the game, contributed code, and provided feedback. Your support is what makes this project grow!
 
-Remember, the description is the first thing people see when they visit your repository, so it’s a great place to make a good impression. You can always adjust the tone and content to better match your vision for the game or to highlight particular aspects you want to showcase. Good luck with your game, and I hope it reaches many players!
 
 
 
