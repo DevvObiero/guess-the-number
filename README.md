@@ -8,19 +8,8 @@ Difficulty Levels: The game offers multiple difficulty levels, adjusting the ran
 Score Tracking: Keep track of how many attempts it takes to guess the number correctly, with lower scores indicating more efficient guessing.
 Replayability: Once a game is completed, players can choose to play again, trying to beat their previous score or simply enjoy the game without any pressure.
 💡 Getting Started
-To dive into the game, clone this repository to your local machine:
+To dive into the game:click this (https://guessmasterrr.netlify.app)
 
-bash
-Copy code
-git clone https://github.com/yourusername/guess-the-number-game.git
-Navigate into the project directory, and run the game using Python:
-
-bash
-Copy code
-cd guess-the-number-game
-python guess_the_number.py
-📚 Requirements
-Python 3.x
 🤝 Contributing
 Feel free to fork this repository and submit pull requests to contribute to the game's development. Whether it's adding new features, improving the code, or fixing bugs, your contributions are warmly welcomed. Check out the issues page for ideas on what you can help with.
 
